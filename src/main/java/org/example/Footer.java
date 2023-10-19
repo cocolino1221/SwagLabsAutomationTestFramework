@@ -1,2 +1,4 @@
-package org.example;public class Footer {
+package org.example;
+
+public class Footer {
 }

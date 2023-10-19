@@ -1,0 +1,38 @@
+import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.SetValueOptions;
+
+import static com.codeborne.selenide.Selenide.$;
+
+public class CheckoutPage {
+    public final SelenideElement checkoutPageTitle = $(".title");
+    public final SelenideElement firstName = $("#first-name");
+    public final SelenideElement lastName = $("#last-name");
+    public final SelenideElement postalCode = $("#postal-code");
+    public final SelenideElement continueButton = $("#continue");
+
+    public String getCheckoutPageTitle() {
+        return checkoutPageTitle.getText();
+    }
+    public void clickFirstName(){
+        firstName.click();
+    }
+    public void clickLastName(){
+        lastName.click();
+    }
+    public void clickPostalCode(){
+        postalCode.click();
+    }
+    public void typeInFirstname(String wordToType){
+        firstName.sendKeys(wordToType);
+    }
+    public void typeInLastname(String wordToType){
+        lastName.sendKeys(wordToType);
+    }
+    public void typeInPostalCode(String wordToType){
+        postalCode.sendKeys(wordToType);
+    }
+    public void clickContinue(){
+        continueButton.click();
+    }
+}
+
