@@ -1,0 +1,1 @@
+{"uuid":"dbd5c01f-94be-4a69-8d66-d80da9a4b308","name":"EcomercePageTest","children":["706c98a6-b53a-4290-b47d-7989511c87f1"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1704389223023,"stop":1704389223111}],"afters":[],"start":1704389223007,"stop":1704389272835}

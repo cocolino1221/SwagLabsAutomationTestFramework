@@ -1,3 +1,4 @@
+import com.codeborne.selenide.Selenide;
 import config.TestConfig;
 import dataprovider.DataProviderForTest;
 import dataprovider.User;
@@ -31,6 +32,7 @@ public class AutenthicationTest extends TestConfig {
     }
     @AfterMethod
     public void reset(){
+        Selenide.refresh();
         header.openMenuButton();
         menu.resetButton();
     }
