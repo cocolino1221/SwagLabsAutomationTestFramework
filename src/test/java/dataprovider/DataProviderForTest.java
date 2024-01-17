@@ -4,6 +4,7 @@ import org.example.Product;
 import org.testng.annotations.DataProvider;
 
 public class DataProviderForTest {
+
     @DataProvider(name = "UserDataProviderTest")
     public Object[] createUserData() {
         return new Object[]{
@@ -54,6 +55,14 @@ public class DataProviderForTest {
                 new InvalidUser("standarduser", "secret_sauce", "Invalid user"),
                 new InvalidUser("","secret_sauce","Please insert username"),
                 new InvalidUser("standard_user", " ", "Please insert password"),
+        };
+    }@DataProvider(name = "CheckoutDetails")
+    public static Object[] createCheckoutDetails(){
+        return new Object[]{
+                new CheckoutDetails("Adam", "John","421098"),
+                new CheckoutDetails("Joe", "Man", "92384"),
+                new CheckoutDetails("","","xxxxqqw"),
+                new CheckoutDetails("Andrew", " ", "131344"),
         };
     }
 }

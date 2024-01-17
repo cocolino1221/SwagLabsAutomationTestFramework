@@ -1,14 +1,11 @@
 import config.TestConfig;
 import dataprovider.DataProviderForTest;
 import dataprovider.User;
-import org.checkerframework.checker.units.qual.A;
 import org.example.*;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
 import static org.testng.Assert.assertEquals;
 
 public class EndToEndTest extends TestConfig {
@@ -57,9 +54,9 @@ public class EndToEndTest extends TestConfig {
         assertEquals(checkoutPage.getCheckoutPageTitle(),"Checkout: Your Information","When checkout page is open " +
                 "Checkout: Your Information title must be displayed");
         checkoutPage.clickFirstName();
-        checkoutPage.typeInFirstname("John");
+        checkoutPage.typeInFirstName("John");
         checkoutPage.clickLastName();
-        checkoutPage.typeInLastname("Wick");
+        checkoutPage.typeInLastName("Wick");
         checkoutPage.clickPostalCode();
         checkoutPage.typeInPostalCode("25348");
         checkoutPage.clickContinue();

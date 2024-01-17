@@ -1,5 +1,4 @@
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.SetValueOptions;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -9,6 +8,7 @@ public class CheckoutPage {
     public final SelenideElement lastName = $("#last-name");
     public final SelenideElement postalCode = $("#postal-code");
     public final SelenideElement continueButton = $("#continue");
+
 
     public String getCheckoutPageTitle() {
         return checkoutPageTitle.getText();
@@ -22,10 +22,10 @@ public class CheckoutPage {
     public void clickPostalCode(){
         postalCode.click();
     }
-    public void typeInFirstname(String wordToType){
+    public void typeInFirstName(String wordToType){
         firstName.sendKeys(wordToType);
     }
-    public void typeInLastname(String wordToType){
+    public void typeInLastName(String wordToType){
         lastName.sendKeys(wordToType);
     }
     public void typeInPostalCode(String wordToType){
@@ -34,5 +34,9 @@ public class CheckoutPage {
     public void clickContinue(){
         continueButton.click();
     }
+    public String getTextFirstName(){
+        return firstName.getText();
+    }
+
 }
 
