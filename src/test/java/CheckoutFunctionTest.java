@@ -1,8 +1,6 @@
-import com.codeborne.selenide.Selenide;
 import dataprovider.CheckoutDetails;
 import dataprovider.DataProviderForTest;
 import org.example.*;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -59,7 +57,13 @@ public class CheckoutFunctionTest {
         setupForCheckout();
         checkoutPage.clickFirstName();
         checkoutPage.typeInFirstName(checkoutDetails.getFirstName());
-        assertEquals(checkoutPage.getTextFirstName(),checkoutDetails.this.getFirstName(),"First name must be the same");
+        checkoutPage.clickLastName();
+        checkoutPage.typeInLastName(checkoutDetails.getLastName());
+        checkoutPage.clickPostalCode();
+        checkoutPage.typeInPostalCode(checkoutDetails.getPostalCode());
+        checkoutPage.clickContinue();
+        assertEquals(overviewPage.getOverviewPageTitle(),"Checkout: Overview");
+
 
 
 

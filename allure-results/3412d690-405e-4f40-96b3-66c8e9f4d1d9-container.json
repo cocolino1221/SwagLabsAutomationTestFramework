@@ -1,0 +1,1 @@
+{"uuid":"3412d690-405e-4f40-96b3-66c8e9f4d1d9","name":"CheckoutFunctionTest.reset","children":["1826e5b0-f6f5-4f48-81c0-f44e35b994b1"],"description":"","befores":[],"afters":[{"name":"reset","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1706084376323,"stop":1706084376640}],"start":1706084376323,"stop":1706084376640}
